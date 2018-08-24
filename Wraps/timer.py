@@ -1,4 +1,4 @@
-# coding:utf-8
+# encoding:utf-8
 '''
 用于测试一个函数用了多少时间
 '''
@@ -40,7 +40,7 @@ def func_timer(function):
     return function_timer
 
 @func_timer
-def test(x,y):
+def test(x, y):
     s = x + y
     time.sleep(61)
     print('the sum is: {0}'.format(s))
