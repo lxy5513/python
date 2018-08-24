@@ -46,7 +46,9 @@ def test(x,y):
     print('the sum is: {0}'.format(s))
 
 
-
+'''
+后面是对于函数在执行过程中的计时器
+'''
 start_time = 0
 def consume_time():
     end_time = time.time()
@@ -55,9 +57,10 @@ def consume_time():
     if seconds > 60:
         minutes = int(seconds/60)
         seconds = seconds % 60
+        seconds = round(seconds, 2)
         print("耗时 {} 分 {} 秒".format(minutes, seconds))
     else:
-        print("耗时 {} 秒".format(seconds))
+        print("耗时 {} 秒".format(round(seconds, 2)))
 
 
 if __name__ == '__main__':
