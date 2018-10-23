@@ -1,11 +1,15 @@
-import logger
+import logging
+import os 
+import sys 
+import logging.handlers
+import datetime
 
 # set log
 logger = logging.getLogger('mylogger')
 logger.setLevel(logging.DEBUG)
 
 # set all.log
-path_log = os.path.abspath(os.path.join(sys.path[0], '../log/'))
+path_log = os.path.abspath(os.path.join(sys.path[0], './log/'))
 if not(os.path.exists(path_log)):
     os.makedirs(path_log)
 
@@ -29,6 +33,6 @@ logger.addHandler(f_handler)
 
 
 
-logger.info("prediction time length: %s", args.interval)
+logger.info("prediction time length")
 logger.error("data already saved")
 

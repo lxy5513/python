@@ -1,2 +1,4 @@
 2018-07-16 16:17:59,575 - ERROR - log.py[:42] - ERROR
 2018-07-16 16:17:59,575 - CRITICAL - log.py[:43] - critical message
+2018-10-17 10:34:31,494 - ERROR - base.py[:37] - data already saved
+2018-10-17 10:34:45,465 - ERROR - base.py[:37] - data already saved

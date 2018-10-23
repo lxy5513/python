@@ -49,7 +49,7 @@ def test(x, y):
 '''
 后面是对于函数在执行过程中的计时器
 '''
-start_time = 0
+start_time = time.time() 
 def consume_time():
     end_time = time.time()
     interval = end_time - start_time
