@@ -20,14 +20,14 @@ logger = logging.getLogger('mylogger')
 logger.setLevel(logging.DEBUG)
 
 # set all.log
-rf_handle = logging.handlers.TimedRotatingFileHandler('all.log', when='midnight', interval=1,
+rf_handle = logging.handlers.TimedRotatingFileHandler('logs/all.log', when='midnight', interval=1,
                                                    backupCount=7, atTime=datetime.time(0, 0, 0,0 ))
 rf_handle.setFormatter(
     logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 )
 
 # set error.log
-f_handler = logging.FileHandler('error.log')
+f_handler = logging.FileHandler('logs/error.log')
 f_handler.setLevel(logging.ERROR)
 f_handler.setFormatter(
     logging.Formatter("%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s")
@@ -43,5 +43,7 @@ logger.error("ERROR")
 logger.critical("critical message")
 print("over")
 
-logger.info("sasa", "aaaa")
+# ############不能用这种格式
+#  logger.info("sasa", "aaaa")
 
+logger.info('asss {}'.format('vvv'))
