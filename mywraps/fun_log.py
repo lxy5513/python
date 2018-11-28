@@ -1,5 +1,6 @@
 #! encoding:utf-8
 '''
+通过在函数名上加装饰器的方法记录日志
 用于记录日志， 可以指定函数名称
 '''
 from functools import wraps

@@ -14,7 +14,7 @@ if not(os.path.exists(path_log)):
     os.makedirs(path_log)
 
 all_log_path = path_log + '/all.log'
-rf_handle = logging.handlers.TimedRotatingFileHandler(all_log_path, when='midnight', interval=1,
+rf_handle = logging.handlers.TimedRotatingFileHandler(all_log_path, when='midnight', interval=9,
                                                    backupCount=7, atTime=datetime.time(0, 0, 0, 0 ))
 rf_handle.setFormatter(
     logging.Formatter("%(asctime)s - %(levelname)s - %(filename)s - %(message)s")

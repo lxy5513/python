@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
-
+'''
+将图片的后缀名都改为jpg
+'''
 import os
 
 class ImageRename():

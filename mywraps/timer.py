@@ -6,7 +6,7 @@ from functools import wraps
 import time
 import pdb
 
-def func_timer(function):
+def timer(function):
     '''
     用装饰器实现函数计时
     :param function: 需要计时的函数
@@ -39,7 +39,7 @@ def func_timer(function):
         return result
     return function_timer
 
-@func_timer
+@timer
 def test(x, y):
     s = x + y
     time.sleep(61)
@@ -50,7 +50,7 @@ def test(x, y):
 后面是对于函数在执行过程中的计时器
 '''
 start_time = time.time() 
-def consume_time():
+def consume_time(start_time):
     end_time = time.time()
     interval = end_time - start_time
     seconds = interval
