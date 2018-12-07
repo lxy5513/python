@@ -18,7 +18,10 @@ def Logger(error=False):
     # 如果error是true的话， 显示error信息
 
     # 选择当前文件价下的logs
-    path_log = os.path.abspath(os.path.join(sys.path[0], './logs/'))
+    filename = sys.argv[0]
+    dirname = os.path.dirname(filename)
+    abspath = os.path.abspath(dirname)
+    path_log = abspath + '/logs/'
     if not(os.path.exists(path_log)):
         os.makedirs(path_log)
 
