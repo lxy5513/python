@@ -8,5 +8,6 @@ filename = sys.argv[0]
 dirname = os.path.dirname(filename)
 abspath = os.path.abspath(dirname)
 
+#  print(filename, '------', dirname)
 # 这个是脚本的绝对路径
-print(abspath)
+print('script abs path is ', abspath)
