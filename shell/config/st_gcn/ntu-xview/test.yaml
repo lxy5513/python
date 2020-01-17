@@ -1,0 +1,25 @@
+weights: ./work_dir/recognition/ntu-xview/ST_GCN/epoch80_model.pt
+
+# feeder
+feeder: feeder.feeder.Feeder
+test_feeder_args:
+  data_path: /ssd/xyliu/data/NTU/health/test_data.npy
+  label_path: /ssd/xyliu/data/NTU/health/test_data_labels.npy
+
+# model
+model: net.st_gcn.Model
+model_args:
+  in_channels: 3
+  num_class: 8
+  dropout: 0.5
+  edge_importance_weighting: True
+  graph_args:
+    # layout: 'ntu-rgb+d'
+    layout: 'customer settings'
+    strategy: 'spatial'
+
+# test
+phase: test
+device: 1
+test_batch_size: 32
+
